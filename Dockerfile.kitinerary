@@ -1,0 +1,28 @@
+# Dedicated lightweight microservice container for KDE Itinerary extraction
+FROM node:24-trixie-slim
+
+WORKDIR /app
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends tzdata dumb-init ca-certificates \
+    libkitinerary-bin && \
+    ln -sf "$(find /usr/lib -name kitinerary-extractor -type f | head -1)" /usr/local/bin/kitinerary-extractor; \
+    apt-get autoremove -y && \
+    rm -rf /var/lib/apt/lists/*
+
+ENV XDG_CACHE_HOME=/tmp/kf6-cache
+ENV QT_QPA_PLATFORM=offscreen
+ENV KITINERARY_EXTRACTOR_PATH=/usr/local/bin/kitinerary-extractor
+
+COPY services/kitinerary-service/package.json ./
+RUN npm install --omit=dev
+
+COPY services/kitinerary-service/index.js ./
+
+EXPOSE 3002
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+  CMD node -e "fetch('http://localhost:3002/health').then(r => r.ok ? process.exit(0) : process.exit(1)).catch(() => process.exit(1))"
+
+ENTRYPOINT ["dumb-init", "--"]
+CMD ["node", "index.js"]

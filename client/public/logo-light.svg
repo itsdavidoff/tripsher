@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="280" height="60">
+  <defs>
+    <!-- iOS 26 Light Liquid Glass Material -->
+    <linearGradient id="glass-bg-light" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.18" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.12" />
+    </linearGradient>
+    
+    <!-- Light Edge Highlight -->
+    <linearGradient id="glass-edge-light" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.25" />
+    </linearGradient>
+
+    <!-- Emerald Airplane Gradient -->
+    <linearGradient id="plane-grad-light" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#047857" />
+      <stop offset="60%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+  </defs>
+
+  <!-- Liquid Glass Squircle Badge -->
+  <g transform="translate(6, 6)">
+    <rect x="0" y="0" width="48" height="48" rx="15" fill="url(#glass-bg-light)" stroke="url(#glass-edge-light)" stroke-width="1.2" />
+    
+    <!-- Taking-off Airplane & Vapor Trail -->
+    <g>
+      <!-- Curved Takeoff Trail -->
+      <path d="M 10 38 C 14 38 20 34 26 24" fill="none" stroke="url(#plane-grad-light)" stroke-width="3" stroke-linecap="round" opacity="0.8" />
+      <path d="M 8 40 C 11 40 16 37 21 29" fill="none" stroke="#10B981" stroke-width="1.2" stroke-linecap="round" opacity="0.4" stroke-dasharray="2 2" />
+
+      <!-- Sleek Taking-off Airplane Silhouette -->
+      <g transform="translate(30, 17) rotate(-45)">
+        <path d="M 0 -11 C 1.8 -7 3.5 -2 3.5 2 L 12 6.5 L 12 9.5 L 3.5 7.5 L 2.5 13.5 L 5.5 15.5 L 5.5 17.5 L 0 15.5 L -5.5 17.5 L -5.5 15.5 L -2.5 13.5 L -3.5 7.5 L -12 9.5 L -12 6.5 L -3.5 2 C -3.5 -2 -1.8 -7 0 -11 Z" fill="url(#plane-grad-light)" />
+      </g>
+    </g>
+  </g>
+
+  <!-- Modern Minimalist Typography (Light) -->
+  <text x="68" y="39" font-family="'MuseoModerno', 'Inter', system-ui, -apple-system, sans-serif" font-size="26" font-weight="800" fill="#0F172A" letter-spacing="-0.5">Trips<tspan fill="#059669">her</tspan></text>
+</svg>

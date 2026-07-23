@@ -1,0 +1,25 @@
+{
+  "name": "@trek/root",
+  "private": true,
+  "version": "3.4.1",
+  "description": "TREK - A self-hosted, real-time collaborative travel planner. Modified by tripsher.",
+  "workspaces": [
+    "client",
+    "server",
+    "shared"
+  ],
+  "scripts": {
+    "start": "node index.js",
+    "dev": "npm run dev --workspaces --parallel",
+    "build": "npm run build --workspaces",
+    "version:major": "npm version major --workspaces --include-workspace-root --no-git-tag-version",
+    "version:minor": "npm version minor --workspaces --include-workspace-root --no-git-tag-version",
+    "version:patch": "npm version patch --workspaces --include-workspace-root --no-git-tag-version"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "scarfSettings": {
+    "enabled": false
+  }
+}

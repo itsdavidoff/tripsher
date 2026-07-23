@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="glass-s" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399" stop-opacity="0.32" />
+      <stop offset="50%" stop-color="#0F172A" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.2" />
+    </linearGradient>
+    <linearGradient id="edge-s" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#34D399" stop-opacity="0.4" />
+    </linearGradient>
+    <linearGradient id="plane-s" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="60%" stop-color="#34D399" />
+      <stop offset="100%" stop-color="#6EE7B7" />
+    </linearGradient>
+  </defs>
+
+  <rect x="6" y="6" width="88" height="88" rx="26" fill="url(#glass-s)" stroke="url(#edge-s)" stroke-width="2.5" />
+  
+  <g transform="translate(10, 10)">
+    <!-- Curved Takeoff Trail -->
+    <path d="M 18 68 C 26 68 38 60 48 44" fill="none" stroke="url(#plane-s)" stroke-width="5" stroke-linecap="round" opacity="0.85" />
+    <path d="M 14 72 C 21 72 32 64 42 50" fill="none" stroke="#6EE7B7" stroke-width="2" stroke-linecap="round" opacity="0.4" stroke-dasharray="3 3" />
+
+    <!-- Sleek Taking-off Airplane Silhouette -->
+    <g transform="translate(56, 30) rotate(-45)">
+      <path d="M 0 -20 C 3 -12 6 -3 6 4 L 20 11 L 20 16 L 6 13 L 4 23 L 9 27 L 9 30 L 0 27 L -9 30 L -9 27 L -4 23 L -6 13 L -20 16 L -20 11 L -6 4 C -6 -3 -3 -12 0 -20 Z" fill="url(#plane-s)" />
+    </g>
+  </g>
+</svg>

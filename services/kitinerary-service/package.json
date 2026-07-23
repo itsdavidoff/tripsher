@@ -1,0 +1,14 @@
+{
+  "name": "@trek/kitinerary-service",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Standalone microservice wrapper around kitinerary-extractor CLI for TREK booking import.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.1"
+  }
+}
