@@ -479,14 +479,18 @@ This is a modified version of TREK, originally developed by the TREK project. Th
 
 ## Deployment
 
-### Automatic Deployment (CI/CD)
+### Manual Deployment (CI/CD)
 
-This project includes automatic deployment to VPS via GitHub Actions. See [DEPLOYMENT.md](DEPLOYMENT.md) for complete setup instructions.
+This project uses GitHub Actions for manual deployment to VPS. See [DEPLOYMENT.md](DEPLOYMENT.md) for complete setup instructions.
 
-**Quick Setup:**
-1. Generate SSH keys and add to VPS
-2. Configure GitHub Secrets (VPS_HOST, VPS_USER, VPS_SSH_KEY)
-3. Push to main branch → automatic deployment
+**To deploy:**
+1. Go to Actions tab in GitHub repository
+2. Select "Deploy to VPS" workflow
+3. Click "Run workflow"
+4. Choose environment (production/staging)
+5. Click "Run workflow" button
+
+**Note:** Deployment is manual-only for security - only you can trigger deployments.
 
 ### Manual Deployment
 
