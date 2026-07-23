@@ -479,18 +479,20 @@ This is a modified version of TREK, originally developed by the TREK project. Th
 
 ## Deployment
 
+### Webhook Deployment (Recommended)
+
+Automatic deployment via GitHub webhook. See [WEBHOOK-SETUP.md](WEBHOOK-SETUP.md) for complete setup instructions.
+
+**Quick Setup:**
+1. Run `webhook-setup.sh` on your VPS
+2. Configure GitHub webhook with the generated secret
+3. Push to main branch → automatic deployment
+
 ### Manual Deployment (CI/CD)
 
-This project uses GitHub Actions for manual deployment to VPS. See [DEPLOYMENT.md](DEPLOYMENT.md) for complete setup instructions.
+This project also has GitHub Actions workflow for manual deployment. See [DEPLOYMENT.md](DEPLOYMENT.md) for setup instructions.
 
-**To deploy:**
-1. Go to Actions tab in GitHub repository
-2. Select "Deploy to VPS" workflow
-3. Click "Run workflow"
-4. Choose environment (production/staging)
-5. Click "Run workflow" button
-
-**Note:** Deployment is manual-only for security - only you can trigger deployments.
+**Note:** GitHub Actions may require billing setup. Webhook deployment is free and recommended.
 
 ### Manual Deployment
 
