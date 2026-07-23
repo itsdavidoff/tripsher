@@ -477,3 +477,31 @@ TREK is [AGPL v3](LICENSE). Self-host freely for personal or internal company us
 
 This is a modified version of TREK, originally developed by the TREK project. This modified version is maintained by tripsher and is based on TREK source code.
 
+## Deployment
+
+### Automatic Deployment (CI/CD)
+
+This project includes automatic deployment to VPS via GitHub Actions. See [DEPLOYMENT.md](DEPLOYMENT.md) for complete setup instructions.
+
+**Quick Setup:**
+1. Generate SSH keys and add to VPS
+2. Configure GitHub Secrets (VPS_HOST, VPS_USER, VPS_SSH_KEY)
+3. Push to main branch → automatic deployment
+
+### Manual Deployment
+
+For manual deployment using scripts:
+
+```bash
+# Set environment variables
+export VPS_HOST="your-vps-ip"
+export VPS_USER="root"
+export VPS_PASSWORD="your-password"
+
+# Quick update
+node quick-update.mjs
+
+# Full deployment
+node deploy-to-vps.mjs
+```
+

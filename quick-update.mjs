@@ -8,10 +8,10 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const conn = new Client();
 
 const config = {
-  host: '188.34.181.191',
-  port: 22,
-  username: 'root',
-  password: 'KJqNHbaMXWb3XJFerWT4_2026!'
+  host: process.env.VPS_HOST || '188.34.181.191',
+  port: parseInt(process.env.VPS_PORT || '22'),
+  username: process.env.VPS_USER || 'root',
+  password: process.env.VPS_PASSWORD || process.env.VPS_SSH_KEY
 };
 
 function runRemote(command) {
